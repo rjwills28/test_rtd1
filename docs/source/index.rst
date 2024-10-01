@@ -1,7 +1,7 @@
+.. _title:
+
 Welcome to some test documentation!
 ===================================
-
-.. _title:
 
 This is the main repo.
 
