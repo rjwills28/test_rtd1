@@ -3,8 +3,10 @@ Usage
 
 .. _installation:
 
-Installation
-------------
+Installation for MAIN
+---------------------
+
+Main project
 
 Pip:
 
