@@ -20,8 +20,7 @@ extensions = [
 ]
 
 intersphinx_mapping = {
-    'python': ('https://docs.python.org/3/', None),
-    'sphinx': ('https://www.sphinx-doc.org/en/master/', None),
+    'rtd2': ('https://wajr-test-rtd1.readthedocs.io/projects/wajr-test-rtd2/en/latest/', None)
 }
 intersphinx_disabled_domains = ['std']
 
