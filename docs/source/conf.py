@@ -11,12 +11,18 @@ version = '0.1.0'
 # -- General configuration
 
 extensions = [
+    "myst_parser",
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
     'sphinx.ext.autosummary',
     'sphinx.ext.intersphinx',
 ]
+
+source_suffix = {
+    ".rst": "restructuredtext",
+    ".md": "markdown",
+}
 
 intersphinx_mapping = {
     'rtd2': ('https://wajr-test-rtd1.readthedocs.io/projects/wajr-test-rtd2/en/latest/', None)
