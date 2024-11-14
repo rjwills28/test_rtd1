@@ -37,3 +37,7 @@ html_theme = 'sphinx_book_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+html_js_files = [
+    'js/readthedocs.js',
+]
