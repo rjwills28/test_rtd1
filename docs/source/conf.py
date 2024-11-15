@@ -41,5 +41,5 @@ epub_show_urls = 'footnote'
 html_static_path = ['_static']
 
 html_js_files = [
-    'js/readthedocs.js',
+    'javascript/readthedocs.js',
 ]
