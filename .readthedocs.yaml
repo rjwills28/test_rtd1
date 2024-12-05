@@ -6,3 +6,6 @@ build:
   jobs:
     pre_install:
       - python docs/scripts/readthedocs_conf.py
+
+sphinx:
+  configuration: docs/source/conf.py
