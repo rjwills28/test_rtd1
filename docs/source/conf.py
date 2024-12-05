@@ -40,10 +40,6 @@ epub_show_urls = 'footnote'
 
 html_static_path = ['_static']
 
-html_js_files = [
-    'javascript/readthedocs.js',
-]
-
 html_css_files = [
     'css/custom.css',
 ]
