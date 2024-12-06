@@ -5,14 +5,13 @@ original_search.parentNode.replaceChild(new_search, original_search);
 new_search.addEventListener("click", (e) => {
         const event = new CustomEvent("readthedocs-search-show");
         console.log("Dispatching event");
-        document.dispatchEvent(event);
-        console.log("disconnect");
         //document.querySelector("div.content form input").style.color="black";
-        waitForElement(':host > div form > input', (element) => {
+        waitForElement('div form input', (element) => {
             console.log('Element is ready');
             console.log(element.style);
             element.style.color="black";
         });
+        document.dispatchEvent(event);
         console.log("Wait for elm completed");
     });
 });
