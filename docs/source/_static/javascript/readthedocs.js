@@ -8,7 +8,7 @@ new_search.addEventListener("click", (e) => {
         document.dispatchEvent(event);
         console.log("disconnect");
         //document.querySelector("div.content form input").style.color="black";
-        waitForElement('div form', (element) => {
+        waitForElement('form', (element) => {
             console.log('Element is ready');
             console.log(elm.textContent);
         });
