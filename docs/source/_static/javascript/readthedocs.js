@@ -17,11 +17,15 @@ new_search.addEventListener("click", (e) => {
 });
 
 function waitForElement(selector, callback) {
+    
     const interval = setInterval(() => {
+        console.log("Starting");
         const element = document.querySelector(selector);
         if (element) {
             clearInterval(interval);
-            callback(element);
+            //callback(element);
+            console.log("Found");
         }
+        console.log("Didn't find");
     }, 100); // Check every 100ms
 }
