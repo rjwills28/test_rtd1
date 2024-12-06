@@ -6,7 +6,7 @@ new_search.addEventListener("click", (e) => {
         const event = new CustomEvent("readthedocs-search-show");
         document.dispatchEvent(event);
         //document.querySelector("div.content form input").style.color="black";
-        waitForElm('div.content form input').then((elm) => {
+        waitForElm('div form input').then((elm) => {
             console.log('Element is ready');
             console.log(elm.textContent);
         });
