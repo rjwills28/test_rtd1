@@ -8,7 +8,7 @@ new_search.addEventListener("click", (e) => {
         document.dispatchEvent(event);
         console.log("disconnect");
         //document.querySelector("div.content form input").style.color="black";
-        waitForElement('form', (element) => {
+        waitForElement('form input', (element) => {
             console.log('Element is ready');
             console.log(elm.textContent);
         });
@@ -23,7 +23,7 @@ function waitForElement(selector, callback) {
         const element = document.querySelector(selector);
         if (element) {
             clearInterval(interval);
-            //callback(element);
+            callback(element);
             console.log("Found");
         }
         console.log("Didn't find");
