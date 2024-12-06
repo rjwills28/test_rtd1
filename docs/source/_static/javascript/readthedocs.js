@@ -8,7 +8,7 @@ new_search.addEventListener("click", (e) => {
         document.dispatchEvent(event);
         console.log("disconnect");
         //document.querySelector("div.content form input").style.color="black";
-        waitForElement('div form input').then((elm) => {
+        waitForElement('cntent.div form input', (element) => {
             console.log('Element is ready');
             console.log(elm.textContent);
         });
@@ -16,12 +16,12 @@ new_search.addEventListener("click", (e) => {
     });
 });
 
-function waitForElement(selector) {
+function waitForElement(selector, callback) {
     const interval = setInterval(() => {
         const element = document.querySelector(selector);
         if (element) {
             clearInterval(interval);
-            //callback(element);
+            callback(element);
         }
     }, 100); // Check every 100ms
 }
