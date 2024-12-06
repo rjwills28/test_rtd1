@@ -10,7 +10,7 @@ new_search.addEventListener("click", (e) => {
         //document.querySelector("div.content form input").style.color="black";
         waitForElement('form input', (element) => {
             console.log('Element is ready');
-            console.log(element.textContent);
+            console.log(element.style);
             element.style.color="black";
         });
         console.log("Wait for elm completed");
