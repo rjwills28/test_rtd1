@@ -8,7 +8,7 @@ new_search.addEventListener("click", (e) => {
         document.dispatchEvent(event);
         console.log("disconnect");
         //document.querySelector("div.content form input").style.color="black";
-        waitForElm('div form input').then((elm) => {
+        waitForElement('div form input').then((elm) => {
             console.log('Element is ready');
             console.log(elm.textContent);
         });
@@ -16,23 +16,12 @@ new_search.addEventListener("click", (e) => {
     });
 });
 
-function waitForElm(selector) {
-    return new Promise(resolve => {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
+function waitForElement(selector) {
+    const interval = setInterval(() => {
+        const element = document.querySelector(selector);
+        if (element) {
+            clearInterval(interval);
+            //callback(element);
         }
-
-        const observer = new MutationObserver(mutations => {
-            if (document.querySelector(selector)) {
-                observer.disconnect();
-                resolve(document.querySelector(selector));
-            }
-        });
-
-        // If you get "parameter 1 is not of type 'Node'" error, see https://stackoverflow.com/a/77855838/492336
-        observer.observe(document.body, {
-            childList: true,
-            subtree: true
-        });
-    });
+    }, 100); // Check every 100ms
 }
