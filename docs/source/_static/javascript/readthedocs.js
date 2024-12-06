@@ -4,12 +4,15 @@ var new_search = original_search.cloneNode(true);
 original_search.parentNode.replaceChild(new_search, original_search);
 new_search.addEventListener("click", (e) => {
         const event = new CustomEvent("readthedocs-search-show");
+        console.log("Dispatching event");
         document.dispatchEvent(event);
+        console.log("disconnect");
         //document.querySelector("div.content form input").style.color="black";
         waitForElm('div form input').then((elm) => {
             console.log('Element is ready');
             console.log(elm.textContent);
         });
+        console.log("Wait for elm completed");
     });
 });
 
