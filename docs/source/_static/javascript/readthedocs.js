@@ -7,4 +7,15 @@ new_search.addEventListener("click", (e) => {
         document.dispatchEvent(event);
         document.querySelector("readthedocs-search").shadowRoot.querySelector("div form input").style.color="black";
     });
+
+document.addEventListener('keydown', (e) => {
+    if (e.ctrlKey && e.key === "k") {
+       console.log("You just pressed Control and K!ggg");
+       const event = new CustomEvent("readthedocs-search-show");
+       document.dispatchEvent(event);
+       document.querySelector("readthedocs-search").shadowRoot.querySelector("div form input").style.color="black";
+    }
+    });
 });
+
+
