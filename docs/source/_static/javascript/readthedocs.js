@@ -6,6 +6,7 @@ new_search.addEventListener("click", (e) => {
         const event = new CustomEvent("readthedocs-search-show");
         document.dispatchEvent(event);
         document.querySelector("readthedocs-search").shadowRoot.querySelector("div form input").style.color="black";
+        document.querySelector("readthedocs-search").shadowRoot.querySelector("div ul li input").checked=true 
     });
 
 document.addEventListener('keydown', (e) => {
