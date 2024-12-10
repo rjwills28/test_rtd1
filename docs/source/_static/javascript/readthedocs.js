@@ -17,7 +17,7 @@ document.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.key === "k") {
        console.log("You just pressed Control and K!");
        if (document.contains(document.getElementById("pst-search-dialog"))) {
-           document.getElementById("pst-search-dialog").remove();
+           document.getElementById("pst-search-dialog").style.visibility = "hidden";
        }
        triggerRtdSearch();
     }
