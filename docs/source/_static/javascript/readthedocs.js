@@ -14,7 +14,9 @@ new_search.addEventListener("click", (e) => {
     });
  
 document.addEventListener('keydown', (e) => {
-    if (((e.metaKey && !e.ctrlKey) || (!e.metaKey && e.ctrlKey)) && e.key === "k" && !e.shiftKey && !e.altKey) {
+    var useCommandKey = navigator.platform.indexOf("Mac") === 0 || navigator.platform === "iPhone";
+    var metaKeyUsed = useCommandKey ? e.metaKey && !e.ctrlKey : !e.metaKey && e.ctrlKey;
+    if (metaKeyUsed && e.key === "k" && !e.shiftKey && !e.altKey) {
        console.log("You just pressed Control and K!");
        if (document.contains(document.getElementById("pst-search-dialog"))) {
            document.getElementById("pst-search-dialog").style.visibility="hidden";
