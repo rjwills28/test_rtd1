@@ -17,18 +17,8 @@ document.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.key === "k" && !e.shiftKey && !e.altKey) {
        console.log("You just pressed Control and K!");
        if (document.contains(document.getElementById("pst-search-dialog"))) {
-           //document.getElementById("pst-search-dialog").remove();
-           //document.getElementById("pst-search-dialog").style.z-index = 1;
            document.getElementById("pst-search-dialog").style.visibility="hidden";
            document.getElementById("pst-search-dialog").close();
-           const newDiv = document.createElement("dialog");
-           //const newDiv2 = document.createElement("form");
-           //newDiv.setAttribute("id","pst-search-dialog");
-           //newDiv.setAttribute("type","text");
-           //newDiv.appendChild(newDiv2);
-           //document.getElementsByTagName('body')[0].appendChild(newDiv);
-           //console.log("Added");
-           //console.log(document.contains(document.getElementById("pst-search-dialog")));
        }
        triggerRtdSearch();
     }
